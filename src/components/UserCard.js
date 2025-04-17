@@ -1,6 +1,8 @@
-import { Link } from "react-router-dom";
+import { Link , useOutletContext} from "react-router-dom";
 
 function UserCard({user}) {
+  const users =useOutletContext();
+  console.log(users);
     return (
       <article>
           <h2>{user.name}</h2>
@@ -9,4 +11,4 @@ function UserCard({user}) {
     );
   };
   
-  export default UserCard;
+  export default UserCard;  
